@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>주문/결제 - 화면 프로토타입</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+
+  <nav class="index-panel">
+    <h1>화면 목록</h1>
+    <div class="index-category">
+      <div class="index-category-title">판매자프로세스</div>
+      <ul class="index-list">
+        <li><a href="seller-signup.html">회원가입</a></li>
+        <li><a href="seller-product-register.html">상품등록</a></li>
+        <li><a href="seller-order-manage.html">주문관리</a></li>
+      </ul>
+    </div>
+    <div class="index-category">
+      <div class="index-category-title">사용자프로세스</div>
+      <ul class="index-list">
+        <li><a href="user-signup.html">회원가입</a></li>
+        <li><a href="user-product-view.html">상품조회</a></li>
+        <li><a href="user-order-payment.html" class="active">주문/결제</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content-panel">
+    <p class="screen-title">사용자프로세스</p>
+    <h2 class="screen-name">주문/결제</h2>
+
+    <div class="wireframe">
+      <div class="wf-block label-only">주문상품 목록</div>
+      <div class="wf-block">상품명 A · 수량 1 · 10,000원</div>
+      <div class="wf-block">상품명 B · 수량 2 · 30,000원</div>
+      <hr class="wf-divider">
+      <div class="wf-block label-only">배송지 정보</div>
+      <div class="wf-block">입력/선택 - 받는사람, 주소, 연락처</div>
+      <hr class="wf-divider">
+      <div class="wf-block label-only">결제수단 선택</div>
+      <div class="wf-row">
+        <div class="wf-block label-only" style="margin:0;">신용카드</div>
+        <div class="wf-block label-only" style="margin:0;">계좌이체</div>
+        <div class="wf-block label-only" style="margin:0;">간편결제</div>
+      </div>
+      <hr class="wf-divider">
+      <div class="wf-block label-only">총 결제금액: 40,000원</div>
+      <div class="wf-button">결제하기</div>
+    </div>
+  </main>
+
+  <aside class="desc-panel">
+    <h2>화면설명</h2>
+    <p class="desc-name">주문/결제</p>
+
+    <div class="desc-section">
+      <p class="desc-section-title">목적</p>
+      <p>사용자가 장바구니(또는 즉시구매) 상품에 대해 배송지와 결제수단을 지정하고 결제를 완료하는 화면입니다.</p>
+    </div>
+
+    <div class="desc-section">
+      <p class="desc-section-title">주요 기능</p>
+      <ul>
+        <li>주문 상품 목록 및 금액 확인</li>
+        <li>배송지 입력 또는 기존 배송지 선택</li>
+        <li>결제수단 선택(신용카드/계좌이체/간편결제)</li>
+        <li>총 결제금액 확인</li>
+        <li>결제 진행</li>
+      </ul>
+    </div>
+
+    <div class="desc-section">
+      <p class="desc-section-title">비고</p>
+      <p>PG사 연동 및 결제 실패/완료 화면은 추후 별도 정의 필요.</p>
+    </div>
+  </aside>
+
+</div>
+</body>
+</html>

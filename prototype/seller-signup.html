@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>판매자 회원가입 - 화면 프로토타입</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+
+  <nav class="index-panel">
+    <h1>화면 목록</h1>
+    <div class="index-category">
+      <div class="index-category-title">판매자프로세스</div>
+      <ul class="index-list">
+        <li><a href="seller-signup.html" class="active">회원가입</a></li>
+        <li><a href="seller-product-register.html">상품등록</a></li>
+        <li><a href="seller-order-manage.html">주문관리</a></li>
+      </ul>
+    </div>
+    <div class="index-category">
+      <div class="index-category-title">사용자프로세스</div>
+      <ul class="index-list">
+        <li><a href="user-signup.html">회원가입</a></li>
+        <li><a href="user-product-view.html">상품조회</a></li>
+        <li><a href="user-order-payment.html">주문/결제</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content-panel">
+    <p class="screen-title">판매자프로세스</p>
+    <h2 class="screen-name">회원가입</h2>
+
+    <div class="wireframe">
+      <div class="wf-block label-only">로고 / 서비스명</div>
+      <div class="wf-block">입력 - 상호명(사업자명)</div>
+      <div class="wf-block">입력 - 사업자등록번호</div>
+      <div class="wf-block">입력 - 담당자 이메일</div>
+      <div class="wf-block">입력 - 비밀번호</div>
+      <div class="wf-block">입력 - 비밀번호 확인</div>
+      <div class="wf-block">입력 - 담당자 연락처</div>
+      <hr class="wf-divider">
+      <div class="wf-block label-only">[ ] 이용약관 동의 (전체동의)</div>
+      <div class="wf-button">가입하기</div>
+      <div class="wf-button secondary">이미 계정이 있으신가요? 로그인</div>
+    </div>
+  </main>
+
+  <aside class="desc-panel">
+    <h2>화면설명</h2>
+    <p class="desc-name">판매자 회원가입</p>
+
+    <div class="desc-section">
+      <p class="desc-section-title">목적</p>
+      <p>판매자가 서비스 입점을 위해 사업자 정보를 입력하고 신규 계정을 생성하는 화면입니다.</p>
+    </div>
+
+    <div class="desc-section">
+      <p class="desc-section-title">주요 기능</p>
+      <ul>
+        <li>사업자 정보(상호명, 사업자등록번호) 입력</li>
+        <li>담당자 이메일 / 비밀번호 설정</li>
+        <li>담당자 연락처 입력</li>
+        <li>이용약관 동의 체크</li>
+        <li>가입 완료 후 승인 대기 안내(추후 정의)</li>
+      </ul>
+    </div>
+
+    <div class="desc-section">
+      <p class="desc-section-title">비고</p>
+      <p>사업자등록번호 진위확인 연동 여부는 추후 논의 필요.</p>
+    </div>
+  </aside>
+
+</div>
+</body>
+</html>

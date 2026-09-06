@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>상품조회 - 화면 프로토타입</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+
+  <nav class="index-panel">
+    <h1>화면 목록</h1>
+    <div class="index-category">
+      <div class="index-category-title">판매자프로세스</div>
+      <ul class="index-list">
+        <li><a href="seller-signup.html">회원가입</a></li>
+        <li><a href="seller-product-register.html">상품등록</a></li>
+        <li><a href="seller-order-manage.html">주문관리</a></li>
+      </ul>
+    </div>
+    <div class="index-category">
+      <div class="index-category-title">사용자프로세스</div>
+      <ul class="index-list">
+        <li><a href="user-signup.html">회원가입</a></li>
+        <li><a href="user-product-view.html" class="active">상품조회</a></li>
+        <li><a href="user-order-payment.html">주문/결제</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content-panel">
+    <p class="screen-title">사용자프로세스</p>
+    <h2 class="screen-name">상품조회</h2>
+
+    <div class="wireframe" style="max-width:560px;">
+      <div class="wf-block">검색창 - 상품명 검색</div>
+      <div style="margin-bottom:10px;">
+        <span class="wf-tag">전체</span>
+        <span class="wf-tag">카테고리A</span>
+        <span class="wf-tag">카테고리B</span>
+        <span class="wf-tag">카테고리C</span>
+      </div>
+      <div class="wf-row" style="margin-bottom:12px;">
+        <div class="wf-block label-only" style="margin:0;">정렬: 인기순</div>
+        <div class="wf-block label-only" style="margin:0;">최신순</div>
+        <div class="wf-block label-only" style="margin:0;">가격순</div>
+      </div>
+      <div class="wf-row">
+        <div class="wf-card">
+          <div class="wf-thumb">상품 이미지</div>
+          상품명 A<br>10,000원 ★4.5
+        </div>
+        <div class="wf-card">
+          <div class="wf-thumb">상품 이미지</div>
+          상품명 B<br>15,000원 ★4.2
+        </div>
+        <div class="wf-card">
+          <div class="wf-thumb">상품 이미지</div>
+          상품명 C<br>20,000원 ★4.8
+        </div>
+      </div>
+      <div class="wf-button secondary" style="margin-top:14px;">더보기</div>
+    </div>
+  </main>
+
+  <aside class="desc-panel">
+    <h2>화면설명</h2>
+    <p class="desc-name">상품조회</p>
+
+    <div class="desc-section">
+      <p class="desc-section-title">목적</p>
+      <p>사용자가 상품을 검색하고 카테고리/정렬 조건에 따라 목록을 탐색하는 화면입니다.</p>
+    </div>
+
+    <div class="desc-section">
+      <p class="desc-section-title">주요 기능</p>
+      <ul>
+        <li>상품명 검색</li>
+        <li>카테고리 필터</li>
+        <li>정렬(인기순/최신순/가격순)</li>
+        <li>상품 카드 목록(썸네일, 가격, 평점)</li>
+        <li>상품 상세 화면 진입(추후 정의)</li>
+      </ul>
+    </div>
+
+    <div class="desc-section">
+      <p class="desc-section-title">비고</p>
+      <p>상품 상세 페이지는 별도 화면으로 분리 예정.</p>
+    </div>
+  </aside>
+
+</div>
+</body>
+</html>

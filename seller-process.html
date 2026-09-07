@@ -193,6 +193,15 @@
             </div>
           </div>
         </div>
+
+        <div class="dev-check-box">
+          <p class="dev-check-title">개발 체크 사항</p>
+          <p class="dev-check-subtitle">고정배송일 지난 경우 처리</p>
+          <ul class="dev-check-list">
+            <li><strong>고객 노출 단계 (Shop)</strong> — 상품상세에서 이미 지난 고정 날짜는 선택 목록에서 자동 숨김 처리</li>
+            <li><strong>주문 시점 검증 (서버)</strong> — 결제 완료 시점에 선택 날짜가 아직 유효한지 서버에서 재검증, 지난 날짜면 주문 차단 후 재선택 요청</li>
+          </ul>
+        </div>
       </div>
 
     </div>

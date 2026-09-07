@@ -112,7 +112,7 @@
               <tr>
                 <td class="col-badge"><span class="badge badge-shop">Shop</span></td>
                 <td class="col-name">주문/결제</td>
-                <td>페이지 신규 추가</td>
+                <td>선택한 희망배송일 표시</td>
                 <td class="col-status">1</td>
               </tr>
               <tr>
@@ -160,13 +160,13 @@
           <div class="delivery-option-body">
             <label class="delivery-option-label" for="delivery-order-based">주문일 기준</label>
             <div class="day-offset-buttons">
-              <span class="day-btn">+1일</span>
-              <span class="day-btn">+2일</span>
-              <span class="day-btn">+3일</span>
-              <span class="day-btn">+4일</span>
-              <span class="day-btn">+5일</span>
-              <span class="day-btn">+6일</span>
-              <span class="day-btn">+7일</span>
+              <button type="button" class="day-btn day-btn-active">+1일</button>
+              <button type="button" class="day-btn">+2일</button>
+              <button type="button" class="day-btn">+3일</button>
+              <button type="button" class="day-btn">+4일</button>
+              <button type="button" class="day-btn">+5일</button>
+              <button type="button" class="day-btn">+6일</button>
+              <button type="button" class="day-btn">+7일</button>
             </div>
           </div>
         </div>
@@ -196,6 +196,14 @@
       fixedRadio.addEventListener('change', sync);
       orderRadio.addEventListener('change', sync);
       sync();
+
+      var dayButtons = document.querySelectorAll('.day-btn');
+      dayButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          dayButtons.forEach(function (b) { b.classList.remove('day-btn-active'); });
+          btn.classList.add('day-btn-active');
+        });
+      });
     })();
   </script>
 

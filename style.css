@@ -77,12 +77,6 @@ html, body {
   background: #fff;
 }
 
-.content-panel .screen-title {
-  font-size: 13px;
-  color: #999;
-  margin: 0 0 4px;
-}
-
 .content-panel .screen-name {
   font-size: 20px;
   font-weight: 700;

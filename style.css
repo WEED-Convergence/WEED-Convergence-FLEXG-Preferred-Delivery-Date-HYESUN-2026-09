@@ -371,6 +371,45 @@ html, body {
   color: #555;
 }
 
+/* ---------- 정책 화면 전용 ---------- */
+
+.policy-content {
+  max-width: 640px;
+}
+
+.policy-section {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.policy-section:last-child {
+  border-bottom: none;
+}
+
+.policy-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 8px;
+}
+
+.policy-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.policy-list li {
+  margin-bottom: 4px;
+}
+
+.policy-list li:last-child {
+  margin-bottom: 0;
+}
+
 /* ---------- 우측 화면설명 영역 ---------- */
 .desc-panel {
   border-left: 1px solid #ddd;

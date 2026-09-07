@@ -360,25 +360,6 @@ html, body {
   text-align: center;
 }
 
-.tag-new,
-.tag-existing {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  border-radius: 8px;
-  padding: 3px 8px;
-}
-
-.tag-new {
-  background: #E9F7EF;
-  color: #1E7145;
-}
-
-.tag-existing {
-  background: #F1F1EF;
-  color: #777;
-}
-
 .badge {
   display: inline-block;
   font-size: 10px;

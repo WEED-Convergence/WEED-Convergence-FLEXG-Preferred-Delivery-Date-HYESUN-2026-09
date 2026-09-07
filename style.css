@@ -231,59 +231,15 @@ html, body {
   border-radius: 2px;
 }
 
-/* 프로세스 플로우 다이어그램 (번호 타임라인) */
+/* 프로세스 플로우 다이어그램 (세로 박스 + 화살표) */
 .flow-diagram {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   max-width: 640px;
 }
 
-.flow-step {
-  position: relative;
-  display: flex;
-  gap: 16px;
-  padding-bottom: 22px;
-}
-
-.flow-step:last-child {
-  padding-bottom: 0;
-}
-
-.flow-step:not(:last-child)::before {
-  content: "";
-  position: absolute;
-  left: 13px;
-  top: 28px;
-  bottom: -6px;
-  width: 1px;
-  background: #dcdad2;
-}
-
-.flow-step-marker {
-  position: relative;
-  z-index: 1;
-  flex-shrink: 0;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: #F1EFE8;
-  border: 1px solid #B4B2A9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: 700;
-  color: #7a7867;
-}
-
-.flow-step.flow-highlight .flow-step-marker {
-  background: #4f5ed4;
-  border-color: #4f5ed4;
-  color: #fff;
-}
-
-.flow-step-box {
-  flex: 1;
+.flow-box {
   background: #F1EFE8;
   border: 1px solid #B4B2A9;
   border-radius: 8px;
@@ -291,22 +247,30 @@ html, body {
   box-shadow: 0 1px 2px rgba(20, 20, 20, 0.04);
 }
 
-.flow-step.flow-highlight .flow-step-box {
+.flow-box-highlight {
   background: #E6F1FB;
   border-color: #85B7EB;
 }
 
-.flow-step-title {
+.flow-box-title {
   font-size: 13px;
   font-weight: 700;
   color: #2a2a2a;
   margin: 0 0 4px;
 }
 
-.flow-step-desc {
+.flow-box-desc {
   font-size: 11px;
   color: #6b6b6b;
   margin: 0;
+}
+
+.flow-arrow {
+  align-self: center;
+  font-size: 16px;
+  line-height: 1;
+  color: #B4B2A9;
+  padding: 6px 0;
 }
 
 /* 관련 화면 목록 */
@@ -316,6 +280,15 @@ html, body {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(20, 20, 20, 0.05);
+}
+
+.related-table-total {
+  max-width: 760px;
+  margin: 10px 0 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b6b6b;
+  text-align: right;
 }
 
 .related-table {

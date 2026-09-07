@@ -33,52 +33,45 @@
       <div class="process-section">
         <p class="process-section-title">희망배송일 처리 프로세스</p>
         <div class="flow-diagram">
-          <div class="flow-step">
-            <div class="flow-step-marker">1</div>
-            <div class="flow-step-box">
-              <p class="flow-step-title">희망배송일 그룹 생성</p>
-              <p class="flow-step-desc">어드민에서 신규 생성</p>
-            </div>
+          <div class="flow-box">
+            <p class="flow-box-title">1. 그룹 생성 및 유형 설정</p>
+            <p class="flow-box-desc">어드민, 고정 또는 주문일+1~7일 함께 설정</p>
           </div>
+          <div class="flow-arrow">↓</div>
 
-          <div class="flow-step">
-            <div class="flow-step-marker">2</div>
-            <div class="flow-step-box">
-              <p class="flow-step-title">배송일 유형 설정</p>
-              <p class="flow-step-desc">고정 또는 주문일+1~7일</p>
-            </div>
+          <div class="flow-box">
+            <p class="flow-box-title">2. 상품에 그룹 매핑</p>
+            <p class="flow-box-desc">상품등록/수정 화면</p>
           </div>
+          <div class="flow-arrow">↓</div>
 
-          <div class="flow-step">
-            <div class="flow-step-marker">3</div>
-            <div class="flow-step-box">
-              <p class="flow-step-title">상품에 그룹 매핑</p>
-              <p class="flow-step-desc">상품등록·수정 화면</p>
-            </div>
+          <div class="flow-box">
+            <p class="flow-box-title">3. 상품 진열</p>
+            <p class="flow-box-desc">Shop에 노출</p>
           </div>
+          <div class="flow-arrow">↓</div>
 
-          <div class="flow-step flow-highlight">
-            <div class="flow-step-marker">4</div>
-            <div class="flow-step-box">
-              <p class="flow-step-title">사용자 주문 발생</p>
-              <p class="flow-step-desc">상품상세서 희망배송일 선택</p>
-            </div>
+          <div class="flow-box flow-box-highlight">
+            <p class="flow-box-title">4. 사용자 주문 발생</p>
+            <p class="flow-box-desc">상품상세서 희망배송일 선택</p>
           </div>
+          <div class="flow-arrow">↓</div>
 
-          <div class="flow-step">
-            <div class="flow-step-marker">5</div>
-            <div class="flow-step-box">
-              <p class="flow-step-title">발주보류 처리</p>
-              <p class="flow-step-desc">판매자가 직접 상태 변경</p>
-            </div>
+          <div class="flow-box">
+            <p class="flow-box-title">5. 자동 발주처리</p>
+            <p class="flow-box-desc">기존 프로세스대로 자동 진행</p>
           </div>
+          <div class="flow-arrow">↓</div>
 
-          <div class="flow-step">
-            <div class="flow-step-marker">6</div>
-            <div class="flow-step-box">
-              <p class="flow-step-title">발주처리 진행</p>
-              <p class="flow-step-desc">발송 가능일 도래 시</p>
-            </div>
+          <div class="flow-box">
+            <p class="flow-box-title">6. 발주보류 처리</p>
+            <p class="flow-box-desc">판매자가 직접 상태 변경</p>
+          </div>
+          <div class="flow-arrow">↓</div>
+
+          <div class="flow-box">
+            <p class="flow-box-title">7. 발주처리 진행</p>
+            <p class="flow-box-desc">발송 가능일 도래 시 판매자가 직접 확인 후 진행</p>
           </div>
         </div>
       </div>
@@ -171,6 +164,7 @@
             </tbody>
           </table>
         </div>
+        <p class="related-table-total">총 페이지 수: 12개 이상</p>
       </div>
 
       <div class="process-section">

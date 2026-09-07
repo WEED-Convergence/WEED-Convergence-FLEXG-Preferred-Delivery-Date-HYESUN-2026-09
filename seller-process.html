@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>판매자 프로세스 - 화면 프로토타입</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+
+  <nav class="index-panel">
+    <h1>화면 목록</h1>
+    <div class="index-category">
+      <div class="index-category-title">판매자프로세스</div>
+      <ul class="index-list">
+        <li><a href="seller-process.html" class="active">판매자 프로세스</a></li>
+      </ul>
+    </div>
+    <div class="index-category">
+      <div class="index-category-title">사용자프로세스</div>
+      <ul class="index-list">
+        <li><a href="user-signup.html">회원가입</a></li>
+        <li><a href="user-product-view.html">상품조회</a></li>
+        <li><a href="user-order-payment.html">주문/결제</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content-panel">
+    <p class="screen-title">판매자프로세스</p>
+    <h2 class="screen-name">판매자 프로세스</h2>
+
+    <div class="process-top">
+      <div class="flow-diagram">
+        <div class="flow-box">
+          <p class="flow-box-title">희망배송일 그룹 생성</p>
+          <p class="flow-box-desc">어드민에서 신규 생성</p>
+        </div>
+        <div class="flow-arrow">▼</div>
+
+        <div class="flow-box">
+          <p class="flow-box-title">배송일 유형 설정</p>
+          <p class="flow-box-desc">고정 또는 주문일+1~7일</p>
+        </div>
+        <div class="flow-arrow">▼</div>
+
+        <div class="flow-box">
+          <p class="flow-box-title">상품에 그룹 매핑</p>
+          <p class="flow-box-desc">상품등록·수정 화면</p>
+        </div>
+        <div class="flow-arrow">▼</div>
+
+        <div class="flow-box flow-highlight">
+          <p class="flow-box-title">사용자 주문 발생</p>
+          <p class="flow-box-desc">상품상세서 희망배송일 선택</p>
+        </div>
+        <div class="flow-arrow">▼</div>
+
+        <div class="flow-box">
+          <p class="flow-box-title">발주보류 처리</p>
+          <p class="flow-box-desc">판매자가 직접 상태 변경</p>
+        </div>
+        <div class="flow-arrow">▼</div>
+
+        <div class="flow-box">
+          <p class="flow-box-title">발주처리 진행</p>
+          <p class="flow-box-desc">발송 가능일 도래 시</p>
+        </div>
+      </div>
+
+      <div class="related-screens">
+        <p class="related-screens-title">관련 화면 목록</p>
+
+        <div class="related-screen-item">
+          <span class="badge badge-shop">Shop</span>
+          <p class="related-screen-name">상품상세</p>
+          <p class="related-screen-desc">희망배송일 선택 기능 추가</p>
+        </div>
+
+        <div class="related-screen-item">
+          <span class="badge badge-shop">Shop</span>
+          <p class="related-screen-name">주문상세</p>
+          <p class="related-screen-desc">선택한 희망배송일 표시</p>
+        </div>
+
+        <div class="related-screen-item">
+          <span class="badge badge-admin">어드민</span>
+          <p class="related-screen-name">그룹 생성 화면</p>
+          <p class="related-screen-desc">희망배송일 그룹/설정</p>
+        </div>
+
+        <div class="related-screen-item">
+          <span class="badge badge-admin">어드민</span>
+          <p class="related-screen-name">상품등록/수정</p>
+          <p class="related-screen-desc">그룹 매핑 기능 추가</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="delivery-type-section">
+      <p class="delivery-type-title">희망 배송일 유형</p>
+
+      <div class="delivery-option">
+        <input type="radio" name="delivery-type" checked disabled>
+        <div class="delivery-option-body">
+          <p class="delivery-option-label">고정 날짜</p>
+          <input type="date">
+        </div>
+      </div>
+
+      <div class="delivery-option option-disabled">
+        <input type="radio" name="delivery-type" disabled>
+        <div class="delivery-option-body">
+          <p class="delivery-option-label">주문일 기준</p>
+          <div class="day-offset-buttons">
+            <span class="day-btn">+1일</span>
+            <span class="day-btn">+2일</span>
+            <span class="day-btn">+3일</span>
+            <span class="day-btn">+4일</span>
+            <span class="day-btn">+5일</span>
+            <span class="day-btn">+6일</span>
+            <span class="day-btn">+7일</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="desc-panel">
+    <h2>화면설명</h2>
+    <p class="desc-name">판매자 프로세스</p>
+
+    <div class="desc-section">
+      <p class="desc-section-title">목적</p>
+      <p>희망배송일 그룹을 생성하고 상품에 매핑하여, 사용자가 주문 시 선택한 희망배송일에 따라 발주가 보류·진행되는 전체 흐름을 보여주는 화면입니다.</p>
+    </div>
+
+    <div class="desc-section">
+      <p class="desc-section-title">주요 기능</p>
+      <ul>
+        <li>희망배송일 처리 프로세스 6단계 플로우 확인</li>
+        <li>관련 Shop/어드민 화면 목록 확인</li>
+        <li>희망 배송일 유형(고정 날짜 / 주문일 기준) 설정 UI 확인</li>
+      </ul>
+    </div>
+  </aside>
+
+</div>
+</body>
+</html>

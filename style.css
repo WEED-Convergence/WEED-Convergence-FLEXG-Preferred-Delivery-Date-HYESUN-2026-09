@@ -195,6 +195,182 @@ html, body {
   margin-right: 6px;
 }
 
+/* ---------- 판매자 프로세스 화면 전용 ---------- */
+
+.process-top {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+/* 프로세스 플로우 다이어그램 */
+.flow-diagram {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.flow-box {
+  background: #F1EFE8;
+  border: 1px solid #B4B2A9;
+  border-radius: 4px;
+  padding: 12px 14px;
+}
+
+.flow-box.flow-highlight {
+  background: #E6F1FB;
+  border-color: #85B7EB;
+}
+
+.flow-box-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin: 0 0 4px;
+}
+
+.flow-box-desc {
+  font-size: 11px;
+  color: #6b6b6b;
+  margin: 0;
+}
+
+.flow-arrow {
+  text-align: center;
+  color: #B4B2A9;
+  font-size: 16px;
+  line-height: 1;
+  padding: 4px 0;
+}
+
+/* 관련 화면 목록 */
+.related-screens {
+  flex: 1;
+  border: 1px dashed #b5b5b5;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.related-screens-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 12px;
+}
+
+.related-screen-item {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 14px 12px 12px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+
+.related-screen-item:last-child {
+  margin-bottom: 0;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 3px;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+}
+
+.badge-shop {
+  background: #E6F1FB;
+  color: #2E6DA4;
+  border: 1px solid #85B7EB;
+}
+
+.badge-admin {
+  background: #ececec;
+  color: #666;
+  border: 1px solid #ccc;
+}
+
+.related-screen-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 4px;
+}
+
+.related-screen-desc {
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+}
+
+/* 희망 배송일 유형 */
+.delivery-type-section {
+  margin-top: 8px;
+}
+
+.delivery-type-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 12px;
+}
+
+.delivery-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 14px;
+  margin-bottom: 10px;
+  max-width: 480px;
+}
+
+.delivery-option.option-disabled {
+  opacity: 0.45;
+}
+
+.delivery-option input[type="radio"] {
+  margin-top: 3px;
+}
+
+.delivery-option-body {
+  flex: 1;
+}
+
+.delivery-option-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 8px;
+}
+
+.delivery-option input[type="date"] {
+  background: #FFFFFF;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 6px 8px;
+  font-size: 13px;
+  color: #333;
+}
+
+.day-offset-buttons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.day-offset-buttons .day-btn {
+  background: #FFFFFF;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: #555;
+}
+
 /* ---------- 우측 화면설명 영역 ---------- */
 .desc-panel {
   border-left: 1px solid #ddd;

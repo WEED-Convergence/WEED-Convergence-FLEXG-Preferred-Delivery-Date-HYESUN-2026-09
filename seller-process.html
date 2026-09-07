@@ -25,6 +25,7 @@
   </nav>
 
   <main class="content-panel">
+   <div class="content-inner">
     <p class="screen-title">판매자프로세스</p>
     <h2 class="screen-name">판매자 프로세스</h2>
 
@@ -85,48 +86,61 @@
 
       <div class="process-section">
         <p class="process-section-title">관련 화면 목록</p>
-        <div class="related-screens-grid">
-          <div class="related-screen-item">
-            <span class="badge badge-shop">Shop</span>
-            <p class="related-screen-name">상품상세</p>
-            <p class="related-screen-desc">희망배송일 선택 기능 추가</p>
-          </div>
-
-          <div class="related-screen-item">
-            <span class="badge badge-shop">Shop</span>
-            <p class="related-screen-name">주문상세</p>
-            <p class="related-screen-desc">선택한 희망배송일 표시</p>
-          </div>
-
-          <div class="related-screen-item">
-            <span class="badge badge-shop">Shop</span>
-            <p class="related-screen-name">주문/결제</p>
-            <p class="related-screen-desc">페이지 신규 추가</p>
-          </div>
-
-          <div class="related-screen-item">
-            <span class="badge badge-admin">어드민</span>
-            <p class="related-screen-name">그룹 생성 화면</p>
-            <p class="related-screen-desc">희망배송일 그룹/설정</p>
-          </div>
-
-          <div class="related-screen-item">
-            <span class="badge badge-admin">어드민</span>
-            <p class="related-screen-name">상품등록/수정</p>
-            <p class="related-screen-desc">그룹 매핑 기능 추가</p>
-          </div>
-
-          <div class="related-screen-item">
-            <span class="badge badge-admin">어드민</span>
-            <p class="related-screen-name">발주</p>
-            <p class="related-screen-desc">희망배송일 검색 기능 추가</p>
-          </div>
-
-          <div class="related-screen-item">
-            <span class="badge badge-admin">어드민</span>
-            <p class="related-screen-name">주문</p>
-            <p class="related-screen-desc">희망배송일 검색 기능 추가</p>
-          </div>
+        <div class="related-table-wrap">
+          <table class="related-table">
+            <thead>
+              <tr>
+                <th class="col-badge">소속</th>
+                <th class="col-name">화면명</th>
+                <th>설명</th>
+                <th class="col-status">구분</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-badge"><span class="badge badge-shop">Shop</span></td>
+                <td class="col-name">상품상세</td>
+                <td>희망배송일 선택 기능 추가</td>
+                <td class="col-status"><span class="tag-existing">기존</span></td>
+              </tr>
+              <tr>
+                <td class="col-badge"><span class="badge badge-shop">Shop</span></td>
+                <td class="col-name">주문상세</td>
+                <td>선택한 희망배송일 표시</td>
+                <td class="col-status"><span class="tag-existing">기존</span></td>
+              </tr>
+              <tr>
+                <td class="col-badge"><span class="badge badge-shop">Shop</span></td>
+                <td class="col-name">주문/결제</td>
+                <td>페이지 신규 추가</td>
+                <td class="col-status"><span class="tag-new">신규</span></td>
+              </tr>
+              <tr>
+                <td class="col-badge"><span class="badge badge-admin">어드민</span></td>
+                <td class="col-name">그룹 생성 화면</td>
+                <td>희망배송일 그룹/설정</td>
+                <td class="col-status"><span class="tag-new">신규</span></td>
+              </tr>
+              <tr>
+                <td class="col-badge"><span class="badge badge-admin">어드민</span></td>
+                <td class="col-name">상품등록/수정</td>
+                <td>그룹 매핑 기능 추가</td>
+                <td class="col-status"><span class="tag-existing">기존</span></td>
+              </tr>
+              <tr>
+                <td class="col-badge"><span class="badge badge-admin">어드민</span></td>
+                <td class="col-name">발주</td>
+                <td>희망배송일 검색 기능 추가</td>
+                <td class="col-status"><span class="tag-existing">기존</span></td>
+              </tr>
+              <tr>
+                <td class="col-badge"><span class="badge badge-admin">어드민</span></td>
+                <td class="col-name">주문</td>
+                <td>희망배송일 검색 기능 추가</td>
+                <td class="col-status"><span class="tag-existing">기존</span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
@@ -134,17 +148,17 @@
         <p class="process-section-title">희망 배송일 유형</p>
 
         <div class="delivery-option option-selected">
-          <input type="radio" name="delivery-type" checked disabled>
+          <input type="radio" name="delivery-type" id="delivery-fixed" checked>
           <div class="delivery-option-body">
-            <p class="delivery-option-label">고정 날짜</p>
-            <input type="date">
+            <label class="delivery-option-label" for="delivery-fixed">고정 날짜</label>
+            <input type="date" id="delivery-fixed-date">
           </div>
         </div>
 
         <div class="delivery-option option-disabled">
-          <input type="radio" name="delivery-type" disabled>
+          <input type="radio" name="delivery-type" id="delivery-order-based">
           <div class="delivery-option-body">
-            <p class="delivery-option-label">주문일 기준</p>
+            <label class="delivery-option-label" for="delivery-order-based">주문일 기준</label>
             <div class="day-offset-buttons">
               <span class="day-btn">+1일</span>
               <span class="day-btn">+2일</span>
@@ -159,7 +173,31 @@
       </div>
 
     </div>
+   </div>
   </main>
+
+  <script>
+    (function () {
+      var fixedRadio = document.getElementById('delivery-fixed');
+      var orderRadio = document.getElementById('delivery-order-based');
+      var fixedOption = fixedRadio.closest('.delivery-option');
+      var orderOption = orderRadio.closest('.delivery-option');
+      var fixedDate = document.getElementById('delivery-fixed-date');
+
+      function sync() {
+        var isFixed = fixedRadio.checked;
+        fixedOption.classList.toggle('option-selected', isFixed);
+        fixedOption.classList.toggle('option-disabled', !isFixed);
+        orderOption.classList.toggle('option-selected', !isFixed);
+        orderOption.classList.toggle('option-disabled', isFixed);
+        fixedDate.disabled = !isFixed;
+      }
+
+      fixedRadio.addEventListener('change', sync);
+      orderRadio.addEventListener('change', sync);
+      sync();
+    })();
+  </script>
 
   <aside class="desc-panel">
     <h2>화면설명</h2>
